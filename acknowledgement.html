@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Acknowledgement Page</title>
     <link rel="stylesheet" type="text/css" href="acknowledgement.css">
 </head>
+
 <body>
     <header>
         <h1>Acknowledgement Page</h1>
@@ -18,15 +20,17 @@
         </div>
     </main>
     <footer>
-        <p>&copy; 2021 Acknowledgement Page</p>
+        <p>&copy; 2023 Acknowledgement Page</p>
     </footer>
     <script>
         var modal = document.getElementById("modal");
         var agreeBtn = document.getElementById("agree-btn");
 
-        agreeBtn.onclick = function() {
+        agreeBtn.onclick = function () {
             modal.style.display = "none";
-            history.back();
+            setTimeout(function () {
+                window.location.href = document.referrer;
+            }, 800);
         }
 
         /* window.onclick = function(event) {
@@ -36,4 +40,5 @@
         } */
     </script>
 </body>
+
 </html>
